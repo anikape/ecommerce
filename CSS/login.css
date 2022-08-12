@@ -168,7 +168,7 @@ button:hover {
 
 .footer .social-field.facebook:hover {
     background: linear-gradient(to left #1e3c72, #2a5298);
-    letter-spacing: 0.1px;
+    letter-spacing: 0.05px;
 }
 
 .footer .social-field.google {
