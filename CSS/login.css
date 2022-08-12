@@ -179,3 +179,15 @@ button:hover {
     background: linear-gradient(to right, #dd4b39, #dd4b49);
     letter-spacing: 0.8px;
 }
+
+
+/*Remover depois q a pag de cadastro for corretamente realocada*/
+
+.cadastro-container {
+    display: flex;
+    padding: 50px;
+}
+
+.cadastro-container a {
+    color: #fff;
+}
