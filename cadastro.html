@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/cadastro.css">
+    <title>Cadastre-se</title>
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="img-box">
+            <img src="./imagens/logo.png" alt=" banner cadastro ">
+        </div>
+
+
+        <main>
+
+
+            <form class="container">
+
+                <h1 class="title ">Cadastro</h1>
+
+                <div class="form-box">
+                    <h2>Criar Conta</h2>
+                    <p>Já está cadastrado? <a href="# ">Login</a> </p>
+                </div>
+
+
+                <div class="input-group ">
+                    <input type="text " id="nome " required>
+                    <label for="nome ">Nome</label>
+                </div>
+                <div class="input-group ">
+                    <input type="text " id="email " required>
+                    <label for="email ">Email</label>
+                </div>
+
+                <div class="row ">
+                    <div class="input-group">
+                        <input type="text " id="cep" required>
+                        <label for="cep ">CEP</label>
+                    </div>
+
+                    <div class="input-group ">
+                        <input type="text " id="endereco " required>
+                        <label for="endereco ">Endereço</label>
+                    </div>
+                    <div class="input-group ">
+                        <input type="text " id="numero " required>
+                        <label for="numero ">Número</label>
+                    </div>
+
+                    <div class="input-group ">
+                        <input type="text " id="bairro " required>
+                        <label for="bairro ">Bairro</label>
+                    </div>
+                    <div class="input-group ">
+                        <input type="text " id="cidade " required>
+                        <label for="cidade ">Cidade</label>
+                    </div>
+                    <div class="input-group ">
+                        <input type="text " id="estado " required>
+                        <label for="estado ">Estado</label>
+                    </div>
+                </div>
+
+                <div class="input-group w50">
+                    <input type="text " id="senha " required placeholder="Digite sua senha">
+                    <label for="senha">Senha</label>
+                </div>
+
+                <div class="row ">
+                    <button id="btn ">Cadastrar</button>
+                </div>
+            </form>
+        </main>
+
+        <script src="./JS/cepCadastro.js "></script>
+</body>
+
+</html>
