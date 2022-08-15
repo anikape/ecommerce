@@ -21,6 +21,7 @@ header {
 header a {
     color: #F5F5F5;
     text-decoration: none;
+    padding: 20px;
 }
 
 body {
