@@ -1,15 +1,165 @@
 
 /*reset*/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+
+
+/*reset*/
 * {
 padding: 0;
 margin: 0;
 font-family: Arial, Helvetica, sans-serif;
 box-sizing: border-box;
+
 }
 
 
 /*--------------*Header*-------------*/
 
+
+header {
+    width: 100%;
+    height: 90px;
+    padding: 10px;
+    border: none;
+    background-image: linear-gradient(to bottom, #240046, #401069, #5d248e, #7d39b5, #9d4edd);
+}
+
+
+/* Retirar o header a quando o header for inserido na página*/
+
+header a {
+    color: #fff;
+    padding: 20px;
+    text-decoration: none;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+
+/*--------------*Categorias*-------------*/
+
+#container-categorias {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-categorias {
+    width: 100%;
+    margin: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.img-categorias {
+    padding: 5PX;
+    margin-top: 20px;
+    scroll-snap-align: start;
+    /* visual styling */
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #18AF9D;
+    margin-bottom: 5px;
+}
+
+.link-categoria {
+    text-decoration: none;
+    padding: 5px;
+    font-size: 11px;
+    font-weight: bold;
+    color: 240046;
+    border-radius: 10%;
+}
+
+
+/*--------------*Ofertas*-------------*/
+
+#container-ofertas {
+    width: 100%;
+    height: 200px;
+    justify-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 12px;
+    /* visual styling */
+    display: grid;
+    width: 100%;
+    grid-auto-flow: column;
+    gap: 5px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.item-ofertas {
+    border-radius: 50%;
+    margin-top: 5px;
+    width: 150%;
+    height: 100px;
+    font-size: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.img-ofertas {
+    padding: 2px;
+    border: none;
+    height: 100px;
+    border-radius: 18%;
+    margin-bottom: 5px;
+}
+
+
+/*--------------*Histórico*-------------*/
+
+#historico {
+    margin: none;
+    display: flex;
+    width: 100%;
+    height: 125px;
+    font-size: 8px;
+    justify-content: center;
+    background-color: #dcdcdc;
+}
+
+.title-historico {
+    width: 100%;
+    height: 20px;
+    font-size: 8px;
+    justify-content: center;
+    background-color: white;
+    text-align: center;
+    color: #240046;
+    font-weight: bold;
+}
+
+
+/*--------------*Footer*-------------*/
+
+footer {
+    margin-top: 0%;
+    width: 150%;
+    height: 50px;
+    margin-bottom: 0%;
+    border: none;
+    background-image: linear-gradient(to bottom, #240046, #401069, #5d248e, #7d39b5, #9d4edd);
+}
+
+
+/*--------------*@Media*-------------*/
+=======
 header{
 width: 100%;
 height:90px;
@@ -142,15 +292,4 @@ background-image: linear-gradient(to bottom, #240046, #401069, #5d248e, #7d39b5,
 }
 
 /*--------------*@Media*-------------*/
-
-
-
-
-
-
-
-
-
-
-
 
