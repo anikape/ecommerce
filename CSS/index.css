@@ -18,10 +18,14 @@ header {
     background-image: linear-gradient(to bottom, #240046, #401069, #5d248e, #7d39b5, #9d4edd);
 }
 
+
+/* header a tirar depois q o header for iserido*/
+
 header a {
     color: #F5F5F5;
     text-decoration: none;
     padding: 20px;
+    font-size: 14px;
 }
 
 body {
