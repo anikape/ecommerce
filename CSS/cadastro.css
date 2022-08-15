@@ -6,8 +6,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root {
+    --cor-primaria-success: rgb(177, 82, 198);
+    --cor-hover-success: rgb(198, 82, 142);
+    --cor-secundaria-success: rgb(138, 82, 198);
+}
+
 body {
-    background-image: url(../imagens/background.jpg);
+    background-image: url(../imagens/backgroundCadastro.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,21 +25,52 @@ body {
 
 .box {
     display: flex;
-    width: 930px;
+    width: 990px;
+    height: 100%;
+    padding: 50px;
 }
 
 .img-box {
     background-color: rgba(255, 255, 255, 0.5);
-    width: 50%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
-    border-radius: 20px 0 0 20px;
-    opacity: 0.5;
+    border-radius: 50px;
+    /* opacity: 0.5;*/
+    width: 50%;
 }
 
 .img-box img {
+    width: 80%;
+    margin-bottom: 40px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-weight: 500;
+    padding: 50px;
+}
+
+.drop-image {
+    width: 350px;
+    height: 250px;
+    border: 2px dashed black;
+    padding: 20px;
+}
+
+.drop-image img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.drop-image .hover {
+    background: #ddf126e7;
 }
 
 form {
@@ -41,6 +78,7 @@ form {
     backdrop-filter: blur(40px);
     padding: 30px 40px;
     border-radius: 0 20px 20px 0;
+    width: 100%;
 }
 
 .form-box {
@@ -106,7 +144,33 @@ form .input-group button {
     font-size: 16px;
 }
 
-@media (max-width:930px) {
+.btn {
+    border-radius: 8%;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .3s;
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-success {
+    background-color: var(--cor-primaria-success);
+    outline: none;
+    color: var(--cor-secundaria-success)
+}
+
+.btn-success:active {
+    color: var(--cor-primaria-success);
+    background-color: var(--cor-secundaria-success);
+}
+
+
+/*Media Query*/
+
+.btn @media (max-width:930px) {
     .img-box {
         display: none;
     }
