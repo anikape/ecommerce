@@ -167,7 +167,7 @@ form .input-group button {
     background-color: var(--cor-secundaria-success);
 }
 
-/*Filtros*/
+/*Filtros error e succes*/
 .input-group > i{
     visibility: hidden;
     position: absolute;
@@ -186,7 +186,6 @@ form .input-group button {
     color: #116423;
     display: none;
 }
-
 
 .input-group.success input{
     border: 2px solid #116423;
@@ -207,9 +206,6 @@ form .input-group button {
 .input-group.success small.success-message{
     display: inline;
 }
-
-
-
 
 /*Media Query*/
 
