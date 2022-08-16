@@ -1,9 +1,10 @@
 /*reset*/
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 * {
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
@@ -36,17 +37,13 @@ body {
 
 .container-categorias {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .item-categorias {
-    display: inline;
     width: 100%;
     margin: 10px;
     margin-bottom: 20px;
-    align-items: center;
-    text-align: center;
 }
 
 .img-categorias {
@@ -140,15 +137,6 @@ body {
 
 
 /*--------------*Footer*-------------*/
-
-footer {
-    margin-top: 0%;
-    width: 150%;
-    height: 50px;
-    margin-bottom: 0%;
-    border: none;
-    background-image: linear-gradient(to bottom, #240046, #401069, #5d248e, #7d39b5, #9d4edd);
-}
 
 
 /*--------------*@Media*-------------*/
@@ -271,14 +259,15 @@ body {
 
 /*--------------*Footer*-------------*/
 
-footer {
+
+/*footer {
     margin-top: 0%;
     width: 150%;
     height: 50px;
     margin-bottom: 0%;
     border: none;
     background-image: linear-gradient(to bottom, #240046, #401069, #5d248e, #7d39b5, #9d4edd);
-}
+}*/
 
 
 /*--------------*@Media*-------------*/
