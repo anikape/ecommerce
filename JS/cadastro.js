@@ -35,24 +35,26 @@ function checkInputs(){
     
 
     for(let campo of formulario){
-        if(!campo.trim()) {
+        if(!campo) {
+            console.log('Campos vazios!')
             //caso o campo esteja vazio, mostrar mensagem de erro  
-            const message = "Campo obrigatório!"         
-            errorMessage.inerText = message;
+            //const message = "Campo obrigatório!"         
+            //errorMessage.inerText = message;
             //atribuir classe error
-            formControl.classList.add('error');            
-        }else{
-            return;
+            //formControl.classList.add('error');            
         }
     }
 
     //verificar se senhas são iguais
-    if (senha !== confirmarSenha){
-        const message = "Senhas devem ser iguais!"
-        errorMessage.inerText = message;
-        formControl.classList.add('error');
+    if (senha === confirmarSenha){
+        console.log('senhas iguais')
+        
+        //const message = "Senhas devem ser iguais!"
+        //errorMessage.inerText = message;
+        //formControl.classList.add('error');
     } else{
-        formControl.classList.add('success');
+        console.log('senhas diferentes')
+        //formControl.classList.add('success');
     }
 }
 
