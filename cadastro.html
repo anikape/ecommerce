@@ -32,7 +32,7 @@
         <main>
 
 
-            <form>
+            <form class="form">
 
                 <h1 class="title ">Cadastro</h1>
 
@@ -43,54 +43,73 @@
 
 
                 <div class="input-group ">
-                    <label for="nome ">Nome</label>
+                    <label for="nome ">Nome*</label>
                     <input type="text " id="nome " required>
+                    <small class="error-message">Error Message</small>
 
                 </div>
                 <div class="input-group ">
-                    <label for="email ">Email</label>
-                    <input type="text " id="email " required>
+                    <label for="email ">Email*</label>
+                    <input type="email" id="email " placeholder="exemplo@email.com" required>
+                    <small class="error-message">Error Message</small>
 
                 </div>
 
                 <div class="row ">
                     <div class="input-group">
-                        <label for="cep ">CEP</label>
-                        <input type="text " id="cep" required>
+                        <label for="cep">CEP*</label>
+                        <input type="number" id="cep" maxlength="8" required>
+                        <small class="error-message">Error Message</small>                      
 
                     </div>
 
                     <div class="input-group ">
-                        <label for="endereco ">Endereço</label>
+                        <label for="endereco ">Endereço*</label>
                         <input type="text " id="endereco" required>
+                        <small class="error-message">Error Message</small>
 
                     </div>
                     <div class="input-group ">
-                        <label for="numero ">Número</label>
-                        <input type="text " id="numero" required>
+                        <label for="numero ">Número*</label>
+                        <input type="number" id="numero" required>
+                        <small class="error-message">Error Message</small>
 
                     </div>
 
                     <div class="input-group ">
-                        <label for="bairro ">Bairro</label>
+                        <label for="bairro ">Bairro*</label>
                         <input type="text " id="bairro" required>
+                        <small class="error-message">Error Message</small>
 
                     </div>
                     <div class="input-group ">
-                        <label for="cidade ">Cidade</label>
+                        <label for="cidade ">Cidade*</label>
                         <input type="text " id="cidade" required>
+                        <small class="error-message">Error Message</small>
 
                     </div>
-                    <div class="input-group ">
-                        <label for="estado ">Estado</label>
+                    <div class="input-group error">
+                        <label for="estado ">Estado*</label>
                         <input type="text " id="estado" required>
+                        <small class="error-message">Error Message</small>
 
                     </div>
                 </div>
 
                 <div class="input-group w50">
-                    <label for="senha">Senha</label>
-                    <input type="text " id="senha " required placeholder="Digite sua senha">
+                    <label for="senha">Senha*</label>
+                    <input type="password" id="senha " placeholder="Digite sua senha" required>
+                    <i class="success-icon">✓</i>
+                    <small class="error-message">Error Message</small>
+
+                </div>
+
+                <div class="input-group w50 success">
+                    <label for="confirmarSenha">Confirmar Senha</label>
+                    <input type="password" id="confirmarSenha " required>
+                    <i class="success-icon">✓</i>
+                    <small class="error-message">Error Message</small>
+                    <small class="success-message">Success Message</small>
 
                 </div>
 

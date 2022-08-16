@@ -167,10 +167,53 @@ form .input-group button {
     background-color: var(--cor-secundaria-success);
 }
 
+/*Filtros*/
+.input-group > i{
+    visibility: hidden;
+    position: absolute;
+    right: 20px;
+    color: #116423;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.input-group small.error-message {
+    color: #FF008A;
+    display: none;
+}
+
+.input-group small.success-message {
+    color: #116423;
+    display: none;
+}
+
+
+.input-group.success input{
+    border: 2px solid #116423;
+}
+
+.input-group.error input{
+    border: 2px solid #FF008A;
+}
+
+.input-group.success i{
+    visibility: visible;
+}
+
+.input-group.error small.error-message{
+    display: inline;
+}
+
+.input-group.success small.success-message{
+    display: inline;
+}
+
+
+
 
 /*Media Query*/
 
-.btn @media (max-width:930px) {
+@media (max-width:930px) {
     .img-box {
         display: none;
     }
