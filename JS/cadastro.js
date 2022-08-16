@@ -59,4 +59,4 @@ function checkInputs(){
 }
 
 
-form.addEventListener('submit', checkInputs());
+
