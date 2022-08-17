@@ -32,7 +32,7 @@
         <main>
 
 
-            <form class="form" id="form">
+            <form class="form" id="form" action="">
 
                 <h1 class="title ">Cadastro</h1>
 
@@ -98,15 +98,14 @@
 
                 <div class="input-group w50">
                     <label for="senha">Senha*</label>
-                    <input type="password" id="senha " placeholder="Digite sua senha" required>
-                    <i class="success-icon">✓</i>
+                    <input type="password" name="senha" id="senha " placeholder="Digite sua senha" required>                    
                     <small class="error-message">Error Message</small>
 
                 </div>
 
-                <div class="input-group w50">
+                <div class="input-group w50" id="senha2">
                     <label for="confirmarSenha">Confirmar Senha</label>
-                    <input type="password" id="confirmarSenha " required>
+                    <input type="password" name="confirmarSenha" id="confirmarSenha " required >
                     <i class="success-icon">✓</i>
                     <small class="error-message">Error Message</small>
                     <small class="success-message">Success Message</small>
@@ -114,7 +113,7 @@
                 </div>
 
                 <div class="row ">
-                    <button class="btn btn-success" type="submit">Cadastrar</button>
+                    <button class="btn btn-success" type="submit" onclick="verifyPassword()">Cadastrar</button>
                 </div>
             </form>
         </main>
@@ -127,7 +126,7 @@
 
     <script src="./JS/cepCadastro.js"></script>
     <script src="./JS/arrastarEsoltar.js"></script>
-    <!--<script src="./JS/cadastro.js"></script>-->
+    <script src="./JS/cadastro.js"></script>
 
 </body>
 
