@@ -14,20 +14,40 @@
 </head>
 
 <body>
-    <!-----------------Header----------------->
+    
+    <!-----------------NAVBAR----------------->
     <header>
-        <div class=" container ">
-            <img src=" " alt=" " width="50px ">
+        <div class="container-logo">
+            <img src="./imagens/logonavbar.png" alt="Icone de Logo" />
         </div>
+
+        <div class="container">
+            <form class="cont1" action="#" method="post">
+                <input type="text" name="search" id="search" placeholder="Busca" required>
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></i></button>
+            </form>
+        </div>
+        
+        <div>
+            <a href="#" class="IconCart"><i class="fa-solid fa-cart-arrow-down"></i></a>
+            <a href="#" class="IconList"><i class="fa-solid fa-list"></i></a>
+        </div>     
     </header>
 
+    <div class="container-CEP">
+        <form>
+            <div class="CEP">
+                <label for="cep"></label>
+                <input type="text" name="cep" id="cep" placeholder=" Enviar para o Endereço" maxlength="8">
+            </div>
+        </form>
+    </div>
 
-    <a href="cadastro.html ">CADASTRO</a>
-    <a href="login.html ">LOGIN</a>
-    </header>
-
+    <script src="https://kit.fontawesome.com/3cf52c3fb5.js" crossorigin="anonymous"></script>
+    <script src="./JS/cep.js"></script>
 
     <!-----------------Ofertas----------------->
+    
     <section class="container-categorias ">
 
         <div class="item-categorias ">
