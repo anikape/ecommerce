@@ -114,14 +114,14 @@
 
                 <div class="input-group w50" id="senha2">
                     <label for="confirmarSenha">Confirmar Senha</label>
-                    <input type="password" name="confirmarSenha" id="confirmarSenha " required>                    
+                    <input type="password" name="confirmarSenha" id="confirmarSenha " onkeyup="verifyPassword()" required>                    
                     <small class="error-message">Error Message</small>
                     <small class="success-message">Success Message</small>
 
                 </div>
 
                 <div class="row ">
-                    <button class="btn btn-success" type="submit" onclick="verifyPassword()">Cadastrar</button>
+                    <button class="btn btn-success" type="submit" >Cadastrar</button>
                 </div>
             </form>
         </main>

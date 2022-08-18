@@ -17,10 +17,12 @@ function customValidation(event) {
 for (let field of fields) {
     field.addEventListener("invalid", event => {
         // eliminar a mensagem padrão do navegador
-        event.preventDefault()        
+        event.preventDefault()
         customValidation(event)
+
     })
     field.addEventListener("blur", customValidation)
+
 }
 
 
@@ -33,7 +35,7 @@ function ValidateField(field) {
             // se não for customError
             // então verifica se tem erro 
             if (field.validity[error] && !field.validity.valid) {
-                foundError = error; 
+                foundError = error;
             }
         }
         return foundError;
@@ -67,7 +69,7 @@ function ValidateField(field) {
         //selecionando a mensagem de erro dentro do nó
         const errorMessage = formControl.querySelector('small.error-message');
 
-        
+
         if (message) {
             //se tem mensagem de erro, adiciona classe erro na div
             formControl.classList.add("error")
@@ -99,22 +101,34 @@ function verifyPassword() {
     const password = document.getElementsByName("senha")[0];
     const passwordTwo = document.getElementsByName("confirmarSenha")[0];
     const messageClass = document.getElementById('senha2');
+    let passTrue;
 
-    if (password.value !== passwordTwo.value) {
+    if (password.value !== "" || passwordTwo.value !== "") {
+        passTrue = true;
+    } else {
+        passTrue = false;
+    }
+
+    if(passTrue === false) {
+        messageClass.classList.remove("success");
+        messageClass.classList.remove("error");
+    }else if ((passTrue === true) && (password.value !== passwordTwo.value)) {
         //atribui classe e mensagem de erro caso senhas diferentes
         const errorMessage = messageClass.querySelector('small.error-message');
-        messageClass.classList.add("error");
+        messageClass.classList.remove("success")
+        messageClass.classList.add("error")
         errorMessage.innerHTML = "Senhas diferentes"
-    } else {
+    } else if ((passTrue === true) && (password.value === passwordTwo.value)) {
         //atribui classe e mensagem de sucesso caso senhas iguais
         const successMessage = messageClass.querySelector('small.success-message');
         messageClass.classList.remove("error")
         messageClass.classList.add("success")
         successMessage.innerHTML = "Senhas conferem"
+    } 
 
-    }
-    
+
 }
+
 
 
 //Código para não enviar o formulário
