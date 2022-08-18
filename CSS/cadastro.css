@@ -233,17 +233,11 @@ form .input-group button {
     background-color: var(--cor-secundaria-success);
 }
 
+.input-group small{
+    display: block;
+}
 
 /*Filtros error e succes*/
-
-.input-group>i {
-    visibility: hidden;
-    position: absolute;
-    right: 20px;
-    color: #116423;
-    font-weight: bold;
-    font-size: 1.2em;
-}
 
 .input-group small.error-message {
     color: #FF008A;
@@ -261,10 +255,6 @@ form .input-group button {
 
 .input-group.error input {
     border: 2px solid #FF008A;
-}
-
-.input-group.success i {
-    visibility: visible;
 }
 
 .input-group.error small.error-message{
