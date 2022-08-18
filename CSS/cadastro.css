@@ -200,11 +200,11 @@ form .input-group button {
 }
 
 .input-group.error small.error-message{
-    display: inline;
+    display: block;
 }
 
 .input-group.success small.success-message{
-    display: inline;
+    display: block;
 }
 
 /*Media Query*/
