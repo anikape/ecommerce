@@ -8,24 +8,51 @@
     box-sizing: border-box;
 }
 
-html {
-    background-color: rgba(202, 204, 205, 0.652);
-    height: 100vh;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-}
 
 
 /*--------------*Header*-------------*/
 
-@media (max-width: 630px) {
+@media (max-width: 640px) {
 
     body {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
     }
 
-    header {
+    /*  Menu Burger */
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 9vh;
+        right: 0;
+        width: 100%;
+        height: auto;
+        background: #9D4EDD;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        animation: animateheader;
+        animation-duration: 600ms;
+        z-index: 10;
+      }
+      .nav-list li {
+        text-align: center;
+        width: 100%;
+        padding: 20px 0 20px 0;
+        border-bottom: 1px solid #f2f2f2;
+        
+      }
+      .nav-list a {
+        display: none;
+        width: 100%;
+        
+      }
+    .mobile-menu {
+        display: none;
+        
+      }
+
+
+    .container {
         display: flex;
         align-items: center;
         justify-content:space-between;
@@ -75,7 +102,7 @@ html {
     label {
         cursor: pointer;
         position: relative;
-        display: block;
+        display: none;
         height: 22px;
         width: 30px;
     }
@@ -116,6 +143,34 @@ html {
 }
 
 /*--------------*Categorias*-------------*/
+
+header .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9D4EDD;
+    height: 9vh;
+}
+.nav-list {
+    display: flex;
+    list-style: none;
+  }
+  .nav-list li {
+    cursor: pointer;
+    padding: 20px;
+  }
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  .mobile-menu > div {
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #f2f2f2;
+    margin: 8px;
+    transition: 0.3s;
+  }
 
 .container-categorias {
     display: flex;
@@ -226,110 +281,6 @@ html {
 body {
     background-color: #F5F5F5;
 }
-
-
-/*--------------*Categorias*-------------*/
-
-#container-categorias {
-    display: flex;
-    flex-direction: row;
-}
-
-.item-categorias {
-    width: 100%;
-    margin: 10px;
-    margin-bottom: 20px;
-    align-items: center;
-    text-align: center;
-}
-
-.img-categorias {
-    padding: 5PX;
-    margin-top: 20px;
-    scroll-snap-align: start;
-    /* visual styling */
-    width: 80px;
-    height: 80px;
-    flex-shrink: 0;
-    border-radius: 50%;
-    background-color: #18AF9D;
-    margin-bottom: 5px;
-}
-
-.link-categoria {
-    text-decoration: none;
-    padding: 5px;
-    font-size: 11px;
-    font-weight: bold;
-    color: 240046;
-    border-radius: 10%;
-}
-
-
-/*--------------*Ofertas*-------------*/
-
-#container-ofertas {
-    width: 100%;
-    height: 200px;
-    justify-items: center;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    align-items: center;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-padding-left: 12px;
-    /* visual styling */
-    display: grid;
-    width: 100%;
-    grid-auto-flow: column;
-    gap: 5px;
-    padding-left: 5px;
-    text-align: center;
-}
-
-.item-ofertas {
-    border-radius: 50%;
-    margin-top: 5px;
-    width: 150%;
-    height: 100px;
-    font-size: 8px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.img-ofertas {
-    padding: 2px;
-    border: none;
-    height: 100px;
-    border-radius: 18%;
-    margin-bottom: 5px;
-}
-
-
-/*--------------*Histórico*-------------*/
-
-#historico {
-    margin: none;
-    display: flex;
-    width: 100%;
-    height: 125px;
-    font-size: 8px;
-    justify-content: center;
-    background-color: #dcdcdc;
-}
-
-.title-historico {
-    width: 100%;
-    height: 20px;
-    font-size: 8px;
-    justify-content: center;
-    background-color: white;
-    text-align: center;
-    color: #240046;
-    font-weight: bold;
-}
-
 
 /*--------------*Footer*-------------*/
 
