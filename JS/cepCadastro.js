@@ -29,12 +29,12 @@ const pesquisarCep = async() => {
         const dados = await fetch(url);
         const endereco = await dados.json();
         if (endereco.hasOwnProperty('erro')) {
-            document.getElementById('endereco').value = 'CEP não encontrado!';
+            document.getElementsByName('endereco')[0].placeholder = 'CEP não encontrado!';
         } else {
             preencherFormulario(endereco);
         }
     } else {
-        document.getElementById('endereco').value = 'CEP inválido!';
+        document.getElementsByName('endereco')[0].placeholder = 'CEP inválido!';
     }
 
 }
