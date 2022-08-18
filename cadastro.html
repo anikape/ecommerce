@@ -59,10 +59,6 @@
                 <div class="row ">
                     <div class="input-group">
                         <label for="cep">CEP*</label>
-
-                        <input type="number" id="cep" maxlength="8" required>
-                        <small class="error-message">Error Message</small>
-
                         <input type="number" id="cep" maxlength="8" name="cep" required>
                         <small class="error-message">Error Message</small>
 
@@ -104,29 +100,28 @@
 
                 <div class="input-group w50">
                     <label for="senha">Senha*</label>
-                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+                    <input type="password" name="senha" id="senha" onkeyup="senhaForca()" placeholder="Digite sua senha"  required>
                     <small class="error-message">Error Message</small>
                     <!--Mostra a força da senha-->
-                    <div id="corSenha"></div>
+                    <small id="corSenha"></small>
                     <!--Mostra a senha fraca-->
-                    <div id="corSenhaMedia"></div>
+                    <small id="corSenhaMedia"></small>
                     <!--Mostra a força da média-->
-                    <div id="corSenhaForte"></div>
+                    <small id="corSenhaForte"></small>
                     <!--Mostra a força da forte-->
 
                 </div>
 
                 <div class="input-group w50" id="senha2">
                     <label for="confirmarSenha">Confirmar Senha</label>
-                    <input type="password" name="confirmarSenha" id="confirmarSenha " required>
-                    <i class="success-icon">✓</i>
+                    <input type="password" name="confirmarSenha" id="confirmarSenha " onkeyup="verifyPassword()" required>                    
                     <small class="error-message">Error Message</small>
                     <small class="success-message">Success Message</small>
 
                 </div>
 
                 <div class="row ">
-                    <button class="btn btn-success" type="submit" onclick="verifyPassword()">Cadastrar</button>
+                    <button class="btn btn-success" type="submit" >Cadastrar</button>
                 </div>
             </form>
         </main>
@@ -138,11 +133,7 @@
 
 
     <script src="./JS/cepCadastro.js"></script>
-
-
     <script src="./JS/dragDrop.js"></script>
-    <!--<script src="./JS/cadastro.js"></script>-->
-
     <script src="./JS/forcaSenha.js"></script>
     <script src="./JS/cadastro.js"></script>
 

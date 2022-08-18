@@ -7,8 +7,11 @@ function senhaForca() {
 
 
     //Condições para medir a força da senha
+    if (password.length === 0){
+        forca = 0;
+    }
 
-    if ((password.length >= 4) && (password.length <= 7)) {
+    if ((password.length >= 1) && (password.length <= 7)) {
 
         forca += 10;
     } else if (password.length > 7) {
@@ -25,7 +28,7 @@ function senhaForca() {
 
 
     // Verifica os caracteres especiais
-    if ((password.length >= 4) && (password.match(/[@$%*]/))) {
+    if ((password.length >= 8) && (password.match(/[@$%*]/))) {
 
         forca += 30;
     }
@@ -38,16 +41,24 @@ function senhaForca() {
 //Função para mostrar a força da senha
 
 function mostrarForca(forca) {
+    const corSenha =  document.getElementById("corSenha");
+    const corSenhaMedia = document.getElementById("corSenhaMedia");
+    const corSenhaForte = document.getElementById("corSenhaForte");
 
-    if (forca <= 30) {
-        document.getElementById("corSenha").innerHTML = "<span style='color: red;'>Fraca</span>"; // mostra a senha fraca
+    if (forca === 0){
+        corSenha.innerHTML = "";
+    } else if (forca <= 30) {
+        corSenhaMedia.innerHTML = "";
+        corSenhaForte.innerHTML = "";
+        corSenha.innerHTML = "<span style='color: red;'>Fraca</span>"; // mostra a senha fraca
     } else if ((forca >= 30) && (forca < 50)) {
-        document.getElementById("corSenha").innerHTML = "";
-        document.getElementById("corSenhaMedia").innerHTML = "<span style='color: green;'>Média</span>"; // mostra a senha média
+        corSenha.innerHTML = "";
+        corSenhaForte.innerHTML = "";
+        corSenhaMedia.innerHTML = "<span style='color: green;'>Média</span>"; // mostra a senha média
     } else if (forca >= 50) {
-        document.getElementById("corSenha").innerHTML = "";
-        document.getElementById("corSenhaMedia").innerHTML = "";
-        document.getElementById("corSenhaForte").innerHTML = "<span style='color: purpel;'>Forte</span>" // mostra a senha forte
-    }
+        corSenha.innerHTML = "";
+        corSenhaMedia.innerHTML = "";
+        corSenhaForte.innerHTML = "<span style='color: purpel;'>Forte</span>" // mostra a senha forte
+    } 
 
 }
