@@ -1,62 +1,127 @@
-//criando formData para receber valores dos inputs
-const formData = new FormData(document.querySelector('form'));
+// Recebendo campos required do formulário
+const formulario = document.getElementById('form');
+const fields = formulario.querySelectorAll("[required]");
 
-//importando elementos
-const form = document.getElementById('form');
-const nome = formData.get('nome');
-const email = formData.get('email');
-const cep = formData.get('cep');
-const endereco = formData.get('endereco');
-const numero = formData.get('numero');
-const bairro = formData.get('bairro');
-const cidade = formData.get('cidade');
-const estado = formData.get('estado');
-const senha = formData.get('senha');
-const confirmarSenha = formData.get('confirmarSenha');
-const errorMessage = document.getElementsByClassName('error-message');
-const formControl = document.getElementsByClassName('input-group');
 
-//checagem dos inputs vazios
-function checkInputs(){
+function customValidation(event) {
+    //recebe o elemento que disparou o evento de erro 
+    const field = event.target
+    //chama a função enviando o elemento por parâmetro
+    const validation = ValidateField(field)
 
-    const formulario = [
-        nome, 
-        email,
-        cep,
-        endereco,
-        numero, 
-        bairro,
-        cidade,
-        estado,
-        senha,
-        confirmarSenha
-    ]
+    validation()
 
-    
+}
 
-    for(let campo of formulario){
-        if(!campo) {
-            console.log('Campos vazios!')
-            //caso o campo esteja vazio, mostrar mensagem de erro  
-            //const message = "Campo obrigatório!"         
-            //errorMessage.inerText = message;
-            //atribuir classe error
-            //formControl.classList.add('error');            
-        }
-    }
-
-    //verificar se senhas são iguais
-    if (senha === confirmarSenha){
-        console.log('senhas iguais')
-        
-        //const message = "Senhas devem ser iguais!"
-        //errorMessage.inerText = message;
-        //formControl.classList.add('error');
-    } else{
-        console.log('senhas diferentes')
-        //formControl.classList.add('success');
-    }
+//Percorrendo array de campos 
+for (let field of fields) {
+    field.addEventListener("invalid", event => {
+        // eliminar a mensagem padrão do navegador
+        event.preventDefault()        
+        customValidation(event)
+    })
+    field.addEventListener("blur", customValidation)
 }
 
 
+function ValidateField(field) {
+    // logica para verificar se existem erros
+    function verifyErrors() {
+        let foundError = false;
 
+        for (let error in field.validity) {
+            // se não for customError
+            // então verifica se tem erro 
+            if (field.validity[error] && !field.validity.valid) {
+                foundError = error; 
+            }
+        }
+        return foundError;
+    }
+
+    function customMessage(typeError) {
+        //atribuindo mensagens diferentes para cada tipo de erro
+        const messages = {
+            text: {
+                valueMissing: "Este campo não pode estar vazio!"
+            },
+            email: {
+                valueMissing: "Este campo não pode estar vazio!",
+                typeMismatch: "Insira um email válido!"
+            },
+            number: {
+                valueMissing: "Este campo não pode estar vazio!",
+                badInput: "Utilize apenas números!"
+            },
+            password: {
+                valueMissing: "Este campo não pode estar vazio!"
+            }
+        }
+        //retornando o tipo do campo e a mensagem do tipo de erro
+        return messages[field.type][typeError]
+    }
+
+    function setCustomMessage(message) {
+        //recebendo o nó pai do campo que apresentou erro
+        const formControl = field.parentNode;
+        //selecionando a mensagem de erro dentro do nó
+        const errorMessage = formControl.querySelector('small.error-message');
+
+        
+        if (message) {
+            //se tem mensagem de erro, adiciona classe erro na div
+            formControl.classList.add("error")
+            //mensagem de erro recebe mensagem passada por parâmetro
+            errorMessage.innerHTML = message
+        } else {
+            //quando erro é solucionado classe erro é removida
+            formControl.classList.remove("error")
+        }
+
+    }
+
+    return function () {
+
+        const error = verifyErrors()
+
+        if (error) {
+            const message = customMessage(error)
+            setCustomMessage(message)
+        } else {
+            setCustomMessage()
+        }
+    }
+}
+
+// função que verifica se senhas são iguais
+function verifyPassword() {
+    //recebendo elementos
+    const password = document.getElementsByName("senha")[0];
+    const passwordTwo = document.getElementsByName("confirmarSenha")[0];
+    const messageClass = document.getElementById('senha2');
+
+    if (password.value !== passwordTwo.value) {
+        //atribui classe e mensagem de erro caso senhas diferentes
+        const errorMessage = messageClass.querySelector('small.error-message');
+        messageClass.classList.add("error");
+        errorMessage.innerHTML = "Senhas diferentes"
+    } else {
+        //atribui classe e mensagem de sucesso caso senhas iguais
+        const successMessage = messageClass.querySelector('small.success-message');
+        messageClass.classList.remove("error")
+        messageClass.classList.add("success")
+        successMessage.innerHTML = "Senhas conferem"
+
+    }
+    
+}
+
+
+//Código para não enviar o formulário
+//document.querySelector("form")
+    //.addEventListener("submit", event => {
+        //console.log("enviar o formulário")
+
+        // não vai enviar o formulário
+        //event.preventDefault()
+    //})

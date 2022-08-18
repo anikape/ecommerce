@@ -267,12 +267,21 @@ form .input-group button {
     visibility: visible;
 }
 
+
 .input-group.error small.error-message {
     display: inline;
 }
 
 .input-group.success small.success-message {
     display: inline;
+
+.input-group.error small.error-message{
+    display: block;
+}
+
+.input-group.success small.success-message{
+    display: block;
+
 }
 
 
