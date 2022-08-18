@@ -64,7 +64,7 @@
                         <small class="error-message">Error Message</small>
 
                         <input type="number" id="cep" maxlength="8" name="cep" required>
-                        <small class="error-message">Error Message</small>                      
+                        <small class="error-message">Error Message</small>
 
 
                     </div>
@@ -104,14 +104,21 @@
 
                 <div class="input-group w50">
                     <label for="senha">Senha*</label>
-                    <input type="password" name="senha" id="senha " placeholder="Digite sua senha" required>                    
+                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
                     <small class="error-message">Error Message</small>
+                    <!--Mostra a força da senha-->
+                    <div id="corSenha"></div>
+                    <!--Mostra a senha fraca-->
+                    <div id="corSenhaMedia"></div>
+                    <!--Mostra a força da média-->
+                    <div id="corSenhaForte"></div>
+                    <!--Mostra a força da forte-->
 
                 </div>
 
                 <div class="input-group w50" id="senha2">
                     <label for="confirmarSenha">Confirmar Senha</label>
-                    <input type="password" name="confirmarSenha" id="confirmarSenha " required >
+                    <input type="password" name="confirmarSenha" id="confirmarSenha " required>
                     <i class="success-icon">✓</i>
                     <small class="error-message">Error Message</small>
                     <small class="success-message">Success Message</small>
@@ -132,11 +139,11 @@
 
     <script src="./JS/cepCadastro.js"></script>
 
-    <!-- <script src="./JS/arrastarEsoltar.js"></script>-->
+
     <script src="./JS/dragDrop.js"></script>
     <!--<script src="./JS/cadastro.js"></script>-->
 
-    <script src="./JS/arrastarEsoltar.js"></script>
+    <script src="./JS/forcaSenha.js"></script>
     <script src="./JS/cadastro.js"></script>
 
 
