@@ -101,6 +101,8 @@ function verifyPassword() {
     const password = document.getElementsByName("senha")[0];
     const passwordTwo = document.getElementsByName("confirmarSenha")[0];
     const messageClass = document.getElementById('senha2');
+    const errorMessage = messageClass.querySelector('small.error-message');
+    const successMessage = messageClass.querySelector('small.success-message');
     let passTrue;
 
     if (password.value !== "" || passwordTwo.value !== "") {
@@ -112,15 +114,13 @@ function verifyPassword() {
     if(passTrue === false) {
         messageClass.classList.remove("success");
         messageClass.classList.remove("error");
-    }else if ((passTrue === true) && (password.value !== passwordTwo.value)) {
-        //atribui classe e mensagem de erro caso senhas diferentes
-        const errorMessage = messageClass.querySelector('small.error-message');
+    } else if ((passTrue === true) && (password.value !== passwordTwo.value)) {
+        //atribui classe e mensagem de erro caso senhas diferentes       
         messageClass.classList.remove("success")
         messageClass.classList.add("error")
         errorMessage.innerHTML = "Senhas diferentes"
     } else if ((passTrue === true) && (password.value === passwordTwo.value)) {
-        //atribui classe e mensagem de sucesso caso senhas iguais
-        const successMessage = messageClass.querySelector('small.success-message');
+        //atribui classe e mensagem de sucesso caso senhas iguais        
         messageClass.classList.remove("error")
         messageClass.classList.add("success")
         successMessage.innerHTML = "Senhas conferem"
