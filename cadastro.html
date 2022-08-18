@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/cadastro.css">
+    <script src="http://kit.fontawesome.com/a076d05399.js"></script>
     <title>Cadastre-se</title>
 </head>
 
@@ -13,17 +14,17 @@
 
     <div class="box">
         <div class="img-box">
-            <img id="banner" src="./imagens/logo.png" alt=" banner cadastro ">
+            <img id="banner" src="./imagens/logo1.jpeg" alt=" banner cadastro ">
 
-            <div class="container-drop">
-
-
-                <h1>Sua foto aqui</h1>
-                <div class="drop-image">
-
-                </div>
-
+            <div class="drag-area">
+                <div class="icon"> <i class="fas fa-cloud-upload-alt"></i> </div>
+                <header>Arraste sua foto aqui</header>
+                <span>OU</span>
+                <button>Upload File</button>
+                <input type="file" name="" id="" hidden>
             </div>
+
+
 
         </div>
 
@@ -58,8 +59,13 @@
                 <div class="row ">
                     <div class="input-group">
                         <label for="cep">CEP*</label>
+
+                        <input type="number" id="cep" maxlength="8" required>
+                        <small class="error-message">Error Message</small>
+
                         <input type="number" id="cep" maxlength="8" name="cep" required>
                         <small class="error-message">Error Message</small>                      
+
 
                     </div>
 
@@ -117,16 +123,22 @@
                 </div>
             </form>
         </main>
-
-
     </div>
 
 
 
 
+
+
     <script src="./JS/cepCadastro.js"></script>
+
+    <!-- <script src="./JS/arrastarEsoltar.js"></script>-->
+    <script src="./JS/dragDrop.js"></script>
+    <!--<script src="./JS/cadastro.js"></script>-->
+
     <script src="./JS/arrastarEsoltar.js"></script>
     <script src="./JS/cadastro.js"></script>
+
 
 </body>
 
