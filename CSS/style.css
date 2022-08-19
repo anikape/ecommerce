@@ -35,12 +35,8 @@ header .menu {
   }
   
   .menu li:hover {
-    background-color: orange;
-    border-radius: 50%;
-  }
-  
-  .menu li:hover a {
-    color: #3e5902;
+    color: orange;
+    transition: .5s;
   }
   
   .nav-list {
@@ -61,6 +57,13 @@ header .menu {
   .mobile-menu {
     display: none;
     cursor: pointer;
+    margin-right: 10px;
+  }
+  .mobile-menu:hover {
+    background-color: orange;
+    border-radius: 50%;
+    padding: 5px;
+    transition: .5s;
   }
   
   .mobile-menu > div {
@@ -204,13 +207,39 @@ body {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
-
+/* MENU BURGUER */
 .nav-list {
     display: none;
-}
+    position: absolute;
+    top: 9vh;
+    right: 0;
+    width: 100%;
+    height: auto;
+    background: #9D4EDD;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
+  }
+.nav-list li {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #f2f2f2;
+  }
+.nav-list a {
+    display: block;
+    width: 100%;
+  }
 
+.nav-list.active {
+    display: flex;
+  }
 
-
+.mobile-menu {
+    display: block;
+  }
+/* FIM BURGUER */
 
 .container {
     display: flex;
@@ -254,7 +283,7 @@ body {
     }
 
     a:hover {
-        background-color: whitesmoke;
+        
         color: #9D4EDD;
     }
 
