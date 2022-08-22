@@ -1,6 +1,5 @@
-/*reset*/
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+/*reset*/
 * {
     padding: 0;
     margin: 0;
@@ -17,7 +16,7 @@ header .menu {
     justify-content: space-between;
     align-items: center;
     background-color: #9D4EDD;
-    height: 9vh;
+    height: 15vh;
   }
   
   .menu a, .menu li{    
@@ -25,6 +24,7 @@ header .menu {
       text-decoration: none;
       text-transform: uppercase;
       transition: 0.3s;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
   }
   
   .menu img {
@@ -35,7 +35,7 @@ header .menu {
   }
   
   .menu li:hover {
-    color: orange;
+    color:#FF6D00;
     transition: .5s;
   }
   
@@ -51,7 +51,7 @@ header .menu {
   
   .logo {
     font-size: 24px;
-    margin-left: 20px;
+    
   }
   
   .mobile-menu {
@@ -75,7 +75,76 @@ header .menu {
     transition: 0.3s;
   }
 
+/*KeyFrames--------------*Categorias*-------------*/
+
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    } 
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
 /*--------------*Categorias*-------------*/
+
 .container-categorias {
     display: flex;
     justify-content: space-between;
@@ -86,18 +155,24 @@ header .menu {
     margin: 10px;
     margin-bottom: 20px;
 }
+.item-categorias:hover {
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
 
 .img-categorias {
     padding: 5PX;
     margin-top: 20px;
     scroll-snap-align: start;
     /* visual styling */
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    height: 20em;
     flex-shrink: 0;
-    border-radius: 50%;
     background-color: #18AF9D;
     margin-bottom: 5px;
+    
 }
 
 .link-categoria {
@@ -256,7 +331,40 @@ background-color:  #FFF;
     color: #240046;
     font-weight: bold;
 }
+.cont1 {
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    padding: 0.2em;
+}
 
+form input, form button {
+    font-size: 10px;
+    border-radius: 10px;
+    border: none;
+    padding: 8px;     
+}
+
+form button {
+    cursor: pointer;
+    background: none;
+}
+
+form button:hover {
+    background-color: whitesmoke;
+    color: #9D4EDD;
+} 
+
+.input-text {
+    width: 50em;
+    height: 3em;
+}
+
+.IconCart {
+    margin-right: 50px;
+}
+.IconCart:hover {
+    color: #FF6D00;
+}
 
 /*--------------*Footer*-------------*/
 
@@ -267,25 +375,11 @@ body {
     background-color: #F5F5F5;
 }
 
-/*--------------*Footer*-------------*/
-
-
-/*footer {
-    margin-top: 0%;
-    width: 150%;
-    height: 50px;
-    margin-bottom: 0%;
-    border: none;
-    background-image: linear-gradient(to bottom, #240046, #401069, #5d248e, #7d39b5, #9d4edd);
-}*/
-
-
 /*--------------*@Media*-------------*/
 @media (max-width: 640px) {
 
-
 body {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 /* MENU BURGUER */
@@ -322,6 +416,16 @@ body {
   }
 /* FIM BURGUER */
 
+.logo {
+    display: none;
+}
+
+.container-categorias {
+    display: block;
+}
+
+
+
 .container {
     display: flex;
     align-items: center;
@@ -356,6 +460,10 @@ body {
     form button:hover {
         background-color: whitesmoke;
         color: #9D4EDD;
+    } 
+    .input-text {
+        width: 29em;
+        height: 3em;
     }
 
     a {
