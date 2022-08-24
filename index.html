@@ -21,10 +21,18 @@
 
         <nav class="menu">
             <a class="logo" href="./index.html"> <img src="./imagens/logonavbar.png"/> </a>
+            
             <div class="mobile-menu">
                 <div class="l1"></div>
                 <div class="l2"></div>
                 <div class="l3"></div>
+            </div>
+
+            <div class="container">
+                <form class="cont1" action="#" method="post">
+                    <input class="input-text" type="text" name="search" id="search" placeholder="Busca" required> <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></i></button>
+                    
+                </form>
             </div>
 
             <ul class="nav-list">
@@ -33,20 +41,11 @@
                 <a href="#"><li class="itens">Cadastro</li></a>
                 <a href="#"><li class="itens">Contato</li></a>
             </ul>
-
+            <div>
+                <a href="#" class="IconCart"><i class="fa-solid fa-cart-arrow-down"></i></a>
+            </div>
         </nav>
     </header>
-    
-        <div class="container">
-            <form class="cont1" action="#" method="post">
-                <input type="text" name="search" id="search" placeholder="Busca" required>
-                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></i></button>
-            </form>
-        </div>
-        
-        <div>
-            <a href="#" class="IconCart"><i class="fa-solid fa-cart-arrow-down"></i></a>
-
     <div class="container-CEP">
         <form>
             <div class="CEP">
@@ -55,7 +54,7 @@
             </div>
         </form>
     </div>
-
+    
     <script src="https://kit.fontawesome.com/3cf52c3fb5.js" crossorigin="anonymous"></script>
     <script src="./JS/cep.js"></script>
 
