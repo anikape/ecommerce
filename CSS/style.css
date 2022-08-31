@@ -238,7 +238,7 @@ border: 2px solid 	#FF6D00;
 padding: 2px;
 border-radius: 10px;
 cursor: pointer;
-transition: 1s;
+transition: 2s;
 }
 
 .manual-btn:not(:last-child){
