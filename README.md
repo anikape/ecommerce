@@ -1,6 +1,9 @@
 # Site e-commerce 
 ## Desenvolvido por grupo de estudos para desenvolver seus conhecimentos em HTML, CSS, JS e NodeJS usando o modelo gitflow de trabalho em equipe.
 
+## Link da página do projeto: 
+https://anikape.github.io/ecommerce/
+
 ### Features planejadas pelo back end:
 1ª ETAPA - LOGIN
 login JWT/autent por rede social (verificar junto ao BD e retornar ok)
