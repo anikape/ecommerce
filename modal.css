@@ -1,0 +1,208 @@
+#close-modal {
+    margin-top: 2rem;
+    padding: .6rem 1.2rem;
+    background: linear-gradient(to left, #4776e6, #8e54e9);
+    cursor: pointer;
+    color: aliceblue;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    opacity: .9;
+    width: 100px;
+}
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+    /*todos os elementos do site ficarão atrás do modal*/
+}
+
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /*50% para o lado e 50% para cima. Vai alinhar o conteúdo ao centro da tela*/
+    z-index: 10;
+    /*Para que ele fique na frente do fade*/
+    background-color: #ffffff;
+    width: 300px;
+    max-width: 90%;
+    /*visando telas menores)*/
+    padding: 1.2rem;
+}
+
+#modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.hide {
+    display: none;
+}
+
+#form-modal {
+    display: flex;
+    flex-direction: column;
+}
+
+section h2 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+    /* Posision absolute para que a pseudoclasse before possa ser usada no elemento*/
+}
+
+
+/* Linha que fica abaixo do nome Login*/
+
+section h2::before {
+    content: '';
+    position: absolute;
+    /* Posision absolute para que o elemento permaneça no local correto*/
+    height: 4px;
+    width: 25px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+}
+
+.input-field {
+    position: relative;
+    /*Posicion relative pq serão utilizadas as pseudoclasses before e after*/
+}
+
+.input-field:first-child {
+    margin-bottom: 1.5rem;
+}
+
+
+/*linha colorida abaixo dos inputs*/
+
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+    /*Para que ela fique fixa*/
+    height: 1.5px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+    /*Para que ela fique fixa*/
+    height: 2px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+    /*O efeito começa da esquerda*/
+}
+
+.input-field input:focus~.underline::after {
+    transform: scaleX(1);
+}
+
+
+/*Linha se movendo nos inputs*/
+
+.input-field input {
+    outline: none;
+    /*Linha q fica ao redor do input*/
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#login {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    background: linear-gradient(to left, #4776e6, #8e54e9);
+    cursor: pointer;
+    color: aliceblue;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#login:hover {
+    letter-spacing: 2.5px;
+    background: linear-gradient(to right, #4776e6, #8e54e9);
+}
+
+.footer-modal {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.footer-modal span {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.footer-modal .social-field {
+    padding: 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.footer-modal .social-field a i {
+    margin: 0 0.5rem;
+    width: 15px;
+}
+
+.footer-modal .social-field a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-modal .social-field.twitter {
+    background: linear-gradient(to right, #56a7f2, #468aca);
+}
+
+.footer-modal .social-field.twitter:hover {
+    background: linear-gradient(to left, #56a7f2, #468aca);
+    letter-spacing: 0.8px;
+}
+
+.footer-modal .social-field.facebook {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+.footer-modal .social-field.facebook:hover {
+    background: linear-gradient(to left #1e3c72, #2a5298);
+    letter-spacing: 0.05px;
+}
+
+.footer .social-field.google {
+    background: linear-gradient(to right, #dd4b39, #dd4b49);
+}
+
+.footer .social-field.google:hover {
+    background: linear-gradient(to right, #dd4b39, #dd4b49);
+    letter-spacing: 0.8px;
+}
