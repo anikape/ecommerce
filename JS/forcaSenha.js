@@ -7,10 +7,11 @@ function senhaForca() {
 
 
     //Condições para medir a força da senha
+
     if (password.length === 0){
         forca = 0;
     }
-
+   
     if ((password.length >= 1) && (password.length <= 7)) {
 
         forca += 10;
@@ -33,8 +34,8 @@ function senhaForca() {
         forca += 30;
     }
 
-
     mostrarForca(forca);
+    
 
 }
 
@@ -48,17 +49,17 @@ function mostrarForca(forca) {
     if (forca === 0){
         corSenha.innerHTML = "";
     } else if (forca <= 30) {
-        corSenhaMedia.innerHTML = "";
-        corSenhaForte.innerHTML = "";
         corSenha.innerHTML = "<span style='color: red;'>Fraca</span>"; // mostra a senha fraca
+        corSenhaMedia.innerHTML = "";
+        corSenhaForte.innerHTML = "";
     } else if ((forca >= 30) && (forca < 50)) {
+        corSenhaMedia.innerHTML = "<span style='color: green;'>Média</span>"; // mostra a senha média
         corSenha.innerHTML = "";
         corSenhaForte.innerHTML = "";
-        corSenhaMedia.innerHTML = "<span style='color: green;'>Média</span>"; // mostra a senha média
     } else if (forca >= 50) {
+        corSenhaForte.innerHTML = "<span style='color: purpel;'>Forte</span>" // mostra a senha forte
         corSenha.innerHTML = "";
         corSenhaMedia.innerHTML = "";
-        corSenhaForte.innerHTML = "<span style='color: purpel;'>Forte</span>" // mostra a senha forte
     } 
 
 }
