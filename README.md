@@ -4,6 +4,10 @@
 ## Link da página do projeto: 
 https://anikape.github.io/ecommerce/
 
+## Link do repositório da API:
+https://github.com/MarioCesarCF/API-Node-Ecommerce
+**Status:** Em desenvolvimento
+
 ### Features planejadas pelo back end:
 1ª ETAPA - LOGIN
 login JWT/autent por rede social (verificar junto ao BD e retornar ok)
@@ -39,3 +43,4 @@ API antifraude(compras no crédito-pesquisar)
 7ª ETAPA - PROPAGANDAS
 propaganda? frontend?
 API de personalização (retorna itens já buscados pelo user em outros sites)
+
