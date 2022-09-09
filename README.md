@@ -1,6 +1,12 @@
 # Site e-commerce 
 ## Desenvolvido por grupo de estudos para desenvolver seus conhecimentos em HTML, CSS, JS e NodeJS usando o modelo gitflow de trabalho em equipe.
 
+## Tecnologias usadas no projeto:
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="50px" height="50px"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="50px" height="50px" /> 
+<img src="https://user-images.githubusercontent.com/105378159/188524475-83652b5c-76fa-444e-8c10-faed1d113d7b.png" width="50px" height="50px" /> 
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50px" height="50px"/> 
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50px" height="50px" /> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50px" height="50px"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="50px" height="50px"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="50px" height="50px" /> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg" width="50px" height="50px" /> 
+
 ## Link da página do projeto: 
 https://anikape.github.io/ecommerce/
 
