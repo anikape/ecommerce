@@ -237,20 +237,11 @@ form .input-group button {
     display: block;
 }
 
-/*Filtros error e succes*/
+/*Estilizações classe error*/
 
 .input-group small.error-message {
     color: #FF008A;
     display: none;
-}
-
-.input-group small.success-message {
-    color: #116423;
-    display: none;
-}
-
-.input-group.success input {
-    border: 2px solid #116423;
 }
 
 .input-group.error input {
@@ -260,11 +251,6 @@ form .input-group button {
 .input-group.error small.error-message{
     display: block;
 }
-
-.input-group.success small.success-message{
-    display: block;
-}
-
 
 /*Media Query*/
 
