@@ -6,9 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/cadastro.css">
+    <link rel="stylesheet" href="modal.css">
     <script src="http://kit.fontawesome.com/a076d05399.js"></script>
     <title>Cadastre-se</title>
 </head>
+
+<header>
+
+    <!--<div class="container-logo">
+        <img src="./imagens/logonavbar.png" alt="Icone de Logo" />-->
+
+    <nav class="menu">
+        <a class="logo" href="./index.html"> <img src="./imagens/logonavbar.png" /> </a>
+
+        <div class="mobile-menu">
+            <div class="l1"></div>
+            <div class="l2"></div>
+            <div class="l3"></div>
+        </div>
+
+        <div class="container">
+            <form class="cont1" action="#" method="post">
+                <input class="input-text" type="text" name="search" id="search" placeholder="Busca" required> <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></i></button>
+
+            </form>
+        </div>
+
+
+        <ul class="nav-list">
+            <a id="open-modal" href="#">
+                <li class="itens">Login</li>
+            </a>
+            <a href="#">
+                <li class="itens">Ofertas</li>
+            </a>
+            <a href="cadastro.html">
+                <li class="itens">Cadastro</li>
+            </a>
+            <a href="#contacto">
+                <li class="itens">Contato</li>
+            </a>
+            <a href="index.html">
+                <li class="itens ">HOME</li>
+            </a>
+        </ul>
+        <div>
+            <a href="#" class="IconCart"><i class="fa-solid fa-cart-arrow-down"></i></a>
+        </div>
+    </nav>
+</header>
 
 <body>
 
@@ -28,6 +74,59 @@
 
         </div>
 
+        <!---Modal-->
+
+        <section class="modal-container">
+            <div id="fade" class="hide"></div>
+            <div id="modal" class="hide">
+                <div id="modal-header">
+                    <h2>Login</h2>
+                    <button id="close-modal">Fechar</button>
+                </div>
+                <form id="form-modal" action="#" method="post">
+                    <div class="input-field">
+                        <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+                        <div class="underline"></div>
+                        <!----Linha colorida abaixo do input---->
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="password" placeholder="********">
+                        <div class="underline"></div>
+                    </div>
+                    <button id="login" type="submit">Login</button>
+                </form>
+                <!----Login via Redes Sociais---->
+                <div class="footer-modal">
+                    <span>Or Connect with Social Media</span>
+                    <div class="social-fields">
+                        <div class="social-field twitter">
+                            <a href="#">
+                                <i class="fab fa-twitter"> </i> Sign in with Twitter
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="social-fields">
+                        <div class="social-field facebook">
+                            <a href="#">
+                                <i class="fab fa-facebook"></i> Sign in with Facebook
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="social-fields">
+                        <div class="social-field google">
+                            <a href="#">
+                                <i class="fab fa-google"></i> Sign in with Google
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
 
 
         <main>
@@ -39,7 +138,7 @@
 
                 <div class="form-box">
                     <h2>Criar Conta</h2>
-                    <p>Já está cadastrado? <a href="# ">Login</a> </p>
+                    <p>Já está cadastrado? <a id="open-modal" href="# ">Login</a> </p>
                 </div>
 
 
@@ -100,7 +199,7 @@
 
                 <div class="input-group w50">
                     <label for="senha">Senha*</label>
-                    <input type="password" name="senha" id="senha" onkeyup="senhaForca()" placeholder="Digite sua senha"  required>
+                    <input type="password" name="senha" id="senha" onkeyup="senhaForca()" placeholder="Digite sua senha" required>
                     <small class="error-message">Error Message</small>
                     <!--Mostra a força da senha-->
                     <small id="corSenha"></small>
@@ -114,13 +213,13 @@
 
                 <div class="input-group w50" id="senha2">
                     <label for="confirmarSenha">Confirmar Senha</label>
-                    <input type="password" name="confirmarSenha" id="confirmarSenha " onkeyup="verifyPassword()" required>                    
+                    <input type="password" name="confirmarSenha" id="confirmarSenha " onkeyup="verifyPassword()" required>
                     <small class="error-message">Error Message</small>
 
                 </div>
 
                 <div class="row ">
-                    <button class="btn btn-success" type="submit" >Cadastrar</button>
+                    <button class="btn btn-success" type="submit">Cadastrar</button>
                 </div>
             </form>
         </main>
@@ -135,6 +234,7 @@
     <script src="./JS/dragDrop.js"></script>
     <script src="./JS/forcaSenha.js"></script>
     <script src="./JS/cadastro.js"></script>
+    <script src="./modal.js"></script>
 
 
 </body>

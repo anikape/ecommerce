@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background: #240046;
+}
+
+#container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+#container>header {
+    background: #240046;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+main {
+    background-color: #240046;
+    font-size: 20px;
+    padding: 3rem;
+}
+
+footer {
+    background: #240046;
+    height: 7rem;
+    text-align: center;
+    color: #9D4EDD;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    padding: 10px;
+}
+
+
+/* NAV */
+
+nav {
+    background: #240046;
+    font-size: 20px;
+    font-family: 'Urbanist', sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    color: #ecedea;
+    border-right: 1px solid #d4e4ef;
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    display: block;
+    color: #ecedea;
+    padding: 15px;
+}
+
+
+/* MAIN */
+
+main>header {
+    color: #9D4EDD;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+main>header:hover {
+    transform: rotate(2deg);
+}
+
+.produto {
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-align: justify;
+    padding: 30px 30px 30px 30px;
+}
+
+.produto h2 {
+    color: #F7F7F9;
+    padding: 5px 10px;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 22px;
+}
+
+.produto p {
+    color: #F7F7F9;
+    padding: 5px 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+.produto img {
+    border-radius: 50px;
+}
+
+.produto p:hover {
+    transform: scaley(1.2);
+}
+
+button {
+    padding: 10px 20px;
+    background: #9D4EDD;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: 0.8s ease;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+button:hover {
+    border: 1px solid #74FF63;
+    background: #74FF63;
+    color: #fff;
+    transform: scale(1.10);
+}
+
+.produtos {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+
+/*Header Sytle*/
+
+header .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9D4EDD;
+    height: 15vh;
+}
+
+.menu a,
+.menu li {
+    color: #f2f2f2;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.menu img {
+    width: 60%;
+    padding-top: 2%;
+    max-width: 250px;
+    min-width: 190px;
+}
+
+.menu li:hover {
+    color: #FF6D00;
+    transition: .5s;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    cursor: pointer;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.mobile-menu:hover {
+    background-color: orange;
+    border-radius: 50%;
+    padding: 5px;
+    transition: .5s;
+}
+
+.mobile-menu>div {
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #f2f2f2;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+
+/*KeyFrames--------------*Categorias*-------------*/
+
+@-webkit-keyframes swing {
+    15% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50% {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65% {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80% {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes swing {
+    15% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50% {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65% {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80% {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}

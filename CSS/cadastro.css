@@ -233,9 +233,10 @@ form .input-group button {
     background-color: var(--cor-secundaria-success);
 }
 
-.input-group small{
+.input-group small {
     display: block;
 }
+
 
 /*Estilizações classe error*/
 
@@ -248,9 +249,78 @@ form .input-group button {
     border: 2px solid #FF008A;
 }
 
-.input-group.error small.error-message{
+.input-group.error small.error-message {
     display: block;
 }
+
+
+/*--------------*Header*-------------*/
+
+header .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9D4EDD;
+    height: 15vh;
+}
+
+.menu a,
+.menu li {
+    color: #f2f2f2;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.menu img {
+    width: 60%;
+    padding-top: 2%;
+    max-width: 250px;
+    min-width: 190px;
+}
+
+.menu li:hover {
+    color: #FF6D00;
+    transition: .5s;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    cursor: pointer;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.mobile-menu:hover {
+    background-color: orange;
+    border-radius: 50%;
+    padding: 5px;
+    transition: .5s;
+}
+
+.mobile-menu>div {
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #f2f2f2;
+    margin: 8px;
+    transition: 0.3s;
+}
+
 
 /*Media Query*/
 
