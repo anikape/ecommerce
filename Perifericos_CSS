@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+/*reset*/
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+/*--------------*Head*-------------*/
+
+head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  text-transform: uppercase;
+}
+
+/*--------------*Body*-------------*/
+
+.p , .class{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  text-align: center
+}
+
+.caption{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  text-align: center
+}
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  text-align:left;
+  color: black;
+}
+tr {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    display: block;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    background-color: #e3f4d7;
+    scroll-behavior: smooth;
+    font-family: oxygen;
+}
+th {
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  display: block;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background-color: #e3f4d7;
+  scroll-behavior: smooth;
+  font-family: oxygen;
+}
+ul{
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  display: block;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  font-family: oxygen;
+}
+thead{
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  display: block;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  font-family: oxygen;
+}
+main{    
+    color: #010101d5;
+    text-decoration: none;
+    transition: 0.3s;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+img{
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  display: block;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  font-family: oxygen;
+}
+li:hover {
+    color: #FF6D00;
+    transition: .5s;
+}
