@@ -15,7 +15,7 @@
 <body>
 
     <!-----------------NAVBAR----------------->
-    <header>
+    <header id="topo">
 
         <!--<div class="container-logo">
             <img src="./imagens/logonavbar.png" alt="Icone de Logo" />-->
@@ -117,7 +117,7 @@
     <div class="container-CEP">
         <form>
             <div class="CEP">
-                <label for="cep"></label>
+                <label class="cep" for="cep"></label>
                 <input type="text" name="cep" id="cep" placeholder=" Enviar para o Endereço" maxlength="8">
             </div>
         </form>
@@ -126,82 +126,106 @@
     <script src="https://kit.fontawesome.com/3cf52c3fb5.js" crossorigin="anonymous"></script>
     <script src="./JS/cep.js"></script>
 
-    <!-----------------Categorias----------------->
+<!-----------------Categorias----------------->
 
     <section class="container-categorias">
 
         <div class="item-categorias">
             <a class="link-img-categoria" href="paginaAcessorios.html">
-                <img class="img-categorias-teste" src="./imagens/fone.png" alt="imagem ACESSORIOS ">
+                <img class="img-categorias" src="./imagens/cabo-hdmi.svg" alt="imagem ACESSORIOS ">
                 <a class="link-text-categoria" href="paginaAcessorios.html">ACESSÓRIOS</a>
         </div>
         <div class="item-categorias">
             <a class="link-img-categoria" href="Produtos Periféricos.html">
-                <img class="img-categorias-teste" src="./imagens/mouse .png" alt="imagem PERIFERICOS ">
+                <img class="img-categorias" src="./imagens/mouse .png" alt="imagem PERIFERICOS ">
             </a>
             <a class="link-text-categoria" href="Produtos Periféricos.html">PERIFÉRICOS</a>
         </div>
         <div class="item-categorias">
             <a class="link-img-categoria" href="#">
-                <img class="img-categorias-teste" src="./imagens/icon hardwares.png " alt="imagem HARDWARE ">
+                <img class="img-categorias" src="./imagens/icon hardwares.png " alt="imagem HARDWARE ">
             </a>
             <a class="link-text-categoria" href="#">HARDWARE</a>
         </div>
-
+        <!-----------------Link Whats----------------->
+        <div class="whats">
+            <a href="" target="_blank"></a>
+            <img src="./imagens/Logo do WhatsApp PNG [Fundo Transparente e com Fundo].png" idth="100px" alt="Fale 
+        conosco através do whatszapp">
+        </div>
     </section>
+
+
+
+
+
+    <!----------------Informações----------------->
+
+    <div class="container-info">
+        <div class="pagamento">
+            <img src="./imagens/cartoes-de-credito.png" auto="imagem ícone cartão de crédito">
+            <p> PAGAMENTO <b>FACILITADO</b></p>
+            <p>Até 12x sem juros no cartão de crédito e descontos no PIX</p>
+        </div>
+        <div class="entrega">
+            <img src="./imagens/caminhao-de-entrega .png" auto="imagem ícone caminhão de entrega">
+            <p> ENVIO <b>RÁPIDO PARA TODO O BRASIL</b></p>
+            <p>Pedidos com pagamento confirmado até 12h *</p>
+        </div>
+        <div class="seguranca">
+            <img src="./imagens/cadeado.png" auto="imagem ícone cadeado">
+            <p> COMPRA <b>100% SEGURA</b></p>
+            <p>Possuimos certificados que garantem a segurança da sua comprar</p>
+        </div>
+        <div class="atendimento">
+            <img src="./imagens/atendimento-ao-cliente.png" auto="imagem ícone pessoa falando ao telefone">
+            <p> ATENDIMENTO <b>ESPECIALIZADO</b></p>
+            <p>Temos uma equipe de especialistas pronta para te atender</p>
+        </div>
+    </div>
+
     <!-----------------Ofertas----------------->
-    <section class="slides-ofertas">
+    <div class="slides-ofertas">
         <div class="slides-btn">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
-            <input type="radio" name="radio-btn" id="radio5">
-            <input type="radio" name="radio-btn" id="radio6">
+            <input class="input" type="radio" name="slide" id="radio1" checked>
+            <input class="input" type="radio" name="slide" id="radio2">
+            <input class="input" type="radio" name="slide" id="radio3">
+            <input class="input" type="radio" name="slide" id="radio4">
+            <input class="input" type="radio" name="slide" id="radio5">
+            <input class="input" type="radio" name="slide" id="radio6">
 
 
             <!-----------------Slide imagens----------------->
-            <div class="slide-img first">
+            <div class="slide s1">
                 <img src="./imagens/produto1.png " alt="oferta1">
             </div>
-            <div class="slide-img">
+            <div class="slide">
                 <img src="./imagens/produto2.png " alt="oferta2">
             </div>
-            <div class="slide-img">
+            <div class="slide">
                 <img src="./imagens/produto3.png " alt="oferta3">
             </div>
-            <div class="slide-img">
-                <img src="./imagens/produto1.png " alt="oferta4">
+            <div class="slide">
+                <img src="./imagens/produto4.png" alt="oferta4">
             </div>
-            <div class="slide-img">
-                <img src="./imagens/produto2.png " alt="oferta5">
+            <div class="slide">
+                <img src="./imagens/produto5.png" alt="oferta5">
             </div>
-            <div class="slide-img">
-                <img src="./imagens/produto3.png " alt="oferta6">
-            </div>
-
-
-            <!----------------Navigation-auto----------------->
-            <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-                <div class="auto-btn5"></div>
-                <div class="auto-btn6"></div>
+            <div class="slide">
+                <img src="./imagens/produto6.png" alt="oferta6">
             </div>
         </div>
-        <div class="manual-navigation">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
-            <label for="radio5" class="manual-btn"></label>
-            <label for="radio6" class="manual-btn"></label>
-        </div>
-    </section>
+    </div>
 
-
+    <!----------------Navigation-auto----------------->
+    <div class="navigation">
+        <label for="radio1" class="bar"></label>
+        <label for="radio2" class="bar"></label>
+        <label for="radio3" class="bar"></label>
+        <label for="radio4" class="bar"></label>
+        <label for="radio5" class="bar"></label>
+        <label for="radio6" class="bar"></label>
+    </div>
 
 
 
@@ -217,6 +241,17 @@
         </div>
     </section>
 </body>
+
+<!-----------------Scroll-Topo----------------->
+
+<div data-scroll="suave" data-anima="scroll">
+    <a href="#topo">
+        <div class="topo">
+            <img src="./imagens/seta.png" width=" 40px" alt="imagem botao voltar ao topo">
+        </div>
+    </a>
+</div>
+
 <!-----------------Footer------------------>
 <footer class="footer">
     <div class="footer-container">
@@ -290,9 +325,21 @@
 
 
 </footer>
+
+
+
+
+
+
+
 <!---------------Script Carousel Ofertas---->
 <script src="./JS/navegation.js"></script>
 <!------------------------------------------->
+
+<!---------------Script Botão Topo---->
+<script src="./JS/scrollbotaotopo.js"></script>
+<!------------------------------------------->
+
 
 <script src="./JS/MenuBurguer.js"></script>
 <script src="modal.js"></script>
